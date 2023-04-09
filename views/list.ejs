@@ -7,7 +7,29 @@
     <title>To Do List</title>
 </head>
 <body>
-    <h2>It's <%= day %>!</h2>
-    <p>What are you going to do?</p>
+    <% if (day === "Saturday" || day === "Sunday") { %>
+        <h2 style=
+        "background-color: lightgreen;
+        display: inline;
+        border: 1px;
+        border-radius: 10px;
+        padding: 7px 10px;"
+        ><%= day %> ToDo List</h2>
+        <p>What are you going to do?</p>
+        
+    <% } else { %>
+        <h2 style=
+        "background-color: lightcoral;
+        display: inline;
+        border: 1px;
+        border-radius: 10px;
+        padding: 7px 10px;"
+        >It's <%= day %>!</h2>
+        <p>What are you going to do?</p>
+    <% } %>
+
+     
+     
+
 </body>
 </html>
