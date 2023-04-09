@@ -2,67 +2,36 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }))
 app.set('view engine', 'ejs');
+
+
+let toDos = ["Code with Python", "Web Development"];
 
 
 app.get('/', (req, res) => {
 
     const today = new Date();
-    const currentDay = today.getDay();
-    let day = "";
-    
+    const options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+    };
 
-    // Week starts from Sunday (Sunday === 0)
-    // if (currentDay === 0) {
-    //     day = "Sunday";
-    // } else if (currentDay === 1) {
-    //     day = "Monday";
-    // } else if (currentDay === 2) {
-    //     day = "Tuesday";
-    // } else if (currentDay === 3) {
-    //     day = "Wednesday";
-    // } else if (currentDay === 4) {
-    //     day = "Thursday";
-    // } else if (currentDay === 5) {
-    //     day = "Friday";
-    // } else {
-    //     day = "Saturday";
-    // }
+    const day = today.toLocaleDateString('en-US', options);
 
-    switch (currentDay) {
-        case 0:
-            day = "Sunday";
-            break;
+    res.render('list', {dayNum: today, day: day, toDos: toDos})
+});
 
-        case 1:
-            day = "Monday";
-            break;
-        case 2:
-            day = "Tuesday";
-            break;
 
-        case 3:
-            day = "Wednesday";
-            break;
+app.post('/', (req, res) => {
+    const newToDo = req.body.toDo
 
-        case 4:
-            day = "Thursday";
-            break;
-
-        case 5:
-            day = "Friday";
-            break;
-
-        case 6:
-            day = "Saturday";
-            break;
-    
-        default:
-            console.log("Error!");
-            break;
+    if (newToDo !== "") {
+        toDos.push(newToDo);
     }
 
-    res.render('list', {day: day})
+    res.redirect('/');
 });
 
 
