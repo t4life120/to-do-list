@@ -10,6 +10,7 @@ app.set('view engine', 'ejs');
 
 
 let items = ["Code with Python", "Web Development"];
+let workItems = [];
 
 
 app.get('/', (req, res) => {
@@ -23,25 +24,36 @@ app.get('/', (req, res) => {
 
     const day = today.toLocaleDateString('en-US', options);
 
-    res.render('list', {dayNum: today, day: day, items: items})
+    res.render('list', {listTitle: day, listItems: items})
 });
 
 
 app.post('/', (req, res) => {
-    const newToDo = req.body.newToDo
+    const newToDo = req.body.newToDo;
 
     if (newToDo !== "") {
-        items.push(newToDo);
-    }
+        console.log(req.body);
 
-    res.redirect('/');
+        if (req.body.list === "Work") {
+            workItems.push(newToDo);
+            res.redirect('/work');
+        } else {
+            items.push(newToDo);
+            res.redirect('/');
+        }
+    }
 });
 
 
 
+app.get('/work', (req, res) => {
+    res.render('list', {listTitle: "Work List", listItems: workItems});
+});
 
 
-
+app.get('/about', (req, res) => {
+    res.render('about');
+});
 
 
 app.listen(3000, () => {

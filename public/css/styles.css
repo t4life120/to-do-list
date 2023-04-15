@@ -2,7 +2,7 @@ html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
   min-height: 100%;
-  font-family: 'helvetica neue';
+  font-family: "Helvetica Neue", HelveticaNeue, "TeX Gyre Heros", TeXGyreHeros, FreeSans, "Nimbus Sans L", "Liberation Sans", Arimo, Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -40,7 +40,10 @@ input:checked+p {
 }
 
 input[type="checkbox"] {
+  border: 1px;
+  border-radius: 30px;
   margin: 20px;
+  margin-right: 0px;
 }
 
 p {

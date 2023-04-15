@@ -1,0 +1,35 @@
+[33mcommit ba894f11b144f6ac8f048541a86fb8171269c6f2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Tobias Polly <t4life120@gmail.com>
+Date:   Sat Apr 15 13:56:49 2023 +0200
+
+    modify project
+
+[33mcommit 98196be799412a85cace1ddb0d72866f92d40e06[m
+Author: Tobias Polly <t4life120@gmail.com>
+Date:   Sat Apr 15 13:07:11 2023 +0200
+
+    update to new version
+
+[33mcommit f821ba320c43ee64bbb02c0297a12877c1e47164[m
+Author: Tobias <t4life120@gmail.com>
+Date:   Sun Apr 9 13:58:20 2023 +0200
+
+    Update Code with Bootstrap and new post method
+
+[33mcommit 84d31a57217bb6c770cbeaf655574b28cb72961f[m
+Author: Tobias <t4life120@gmail.com>
+Date:   Sun Apr 9 12:14:14 2023 +0200
+
+    Add README.md file
+
+[33mcommit ea18fbd0823be9bcc34d3db926d707501165d729[m
+Author: Tobias <t4life120@gmail.com>
+Date:   Sun Apr 9 12:12:33 2023 +0200
+
+    Update list.ejs file
+
+[33mcommit 71bf33b667b09d42b8ae24c99beca93f84a4a9f5[m[33m ([m[1;32mexperimental[m[33m)[m
+Author: Tobias <t4life120@gmail.com>
+Date:   Sun Apr 9 11:54:20 2023 +0200
+
+    Initial commit, express server and ejs templating
