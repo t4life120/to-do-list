@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import date from './date.js';
 
 
 const app = express();
@@ -8,21 +9,15 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
-
+// Array can also be const, method .push() still works
 let items = ["Code with Python", "Web Development"];
 let workItems = [];
 
 
 app.get('/', (req, res) => {
-
-    const today = new Date();
-    const options = {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-    };
-
-    const day = today.toLocaleDateString('en-US', options);
+    // const day = date(); --> if only one export
+    // const day = date.getDay();
+    const day = date.getDate();
 
     res.render('list', {listTitle: day, listItems: items})
 });
