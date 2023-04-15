@@ -2,11 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 
 
-let toDos = ["Code with Python", "Web Development"];
+let items = ["Code with Python", "Web Development"];
 
 
 app.get('/', (req, res) => {
@@ -20,15 +22,15 @@ app.get('/', (req, res) => {
 
     const day = today.toLocaleDateString('en-US', options);
 
-    res.render('list', {dayNum: today, day: day, toDos: toDos})
+    res.render('list', {dayNum: today, day: day, items: items})
 });
 
 
 app.post('/', (req, res) => {
-    const newToDo = req.body.toDo
+    const newToDo = req.body.newToDo
 
     if (newToDo !== "") {
-        toDos.push(newToDo);
+        items.push(newToDo);
     }
 
     res.redirect('/');
