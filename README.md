@@ -6,7 +6,7 @@ The mini-project was built in the [Web Development Bootcamp](https://www.udemy.c
 
 The `styles.css` was provided as a course resource. Node.js and Express.js were used as the backend solution in combination with the javascript template engine `ejs`.
 
-***
+
 ## Run Locally
 
 If you want to run the app locally or want to take the idea of this repository further by adding a i.e. database, you have to follow a few steps:
