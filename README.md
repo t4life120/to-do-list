@@ -6,6 +6,7 @@ The mini-project was built in the [Web Development Bootcamp](https://www.udemy.c
 
 The `styles.css` was provided as a course resource. Node.js and Express.js were used as the backend solution in combination with the javascript template engine `ejs`.
 
+
 &nbsp;
 ## Run Locally
 
@@ -36,12 +37,14 @@ npm install nodemon -g
 
 The `-g` configuration installs the package globally which is time saving because you don't have to install the package every time you initalize a project with `npm`.
 
-***
+
+&nbsp;
 ## Configurations
 After setting up the project, you can modify the application to your needs. Change the color theme to give it a different look or setup a database by using **MongoDB** or any other database software, to save the ToDos permanently. Right now, the ToDos submitted are saved in an array and therefore get lost as soon as the server is rerun!
 
 In one of the next GitHub Repositories, I will add a database solution, to have some degree of data persistence in my applications.
 
-***
+
+&nbsp;
 ## Contact Me
 I am relatively new to coding, so if you are interested in learning to code together, I would be happy hearing from you. We can also collabarate on any idea and start something great together!
